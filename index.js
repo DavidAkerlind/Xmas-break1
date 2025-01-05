@@ -1,30 +1,37 @@
-// console.log("Hello");
-// console.log("I am David");
+const input = document.getElementById("textInput");
+const submitBtn = document.getElementById("submitBtn");
 
-// window.alert("This is an alert");
-// window.alert("OMG its an alert");
-let name = "David";
-document.getElementById("topHeader").textContent = "Hello";
-document.getElementById("topPara").textContent = name;
+submitBtn.addEventListener("click", function (event) {
+    event.preventDefault();
+    const inputValue = input.value;
 
-console.log(name);
+    if (!isNaN(inputValue) && inputValue.trim() !== "") {
+        console.log(inputValue);
+    } else if (inputValue !== "") {
+        let encryptedMessage = window.atob(inputValue);
+        console.log(encryptedMessage);
+        document.getElementById("encryptText").textContent = encryptedMessage;
+        let decryptedMessage = window.btoa(encryptedMessage);
+        document.getElementById("decryptText").textContent = decryptedMessage;
+    } else {
+        window.alert("type something please");
+    }
+});
 
-if (name !== "David") {
-    console.log(name);
-    document.getElementById("topHeader").textContent = name;
-}
+submitBtn.addEventListener("mouseover", function () {
+    console.log("Muspekaren är över knappen!");
+    document.getElementById("changingText").textContent = "Button Hovered!";
+});
 
-const intrestRate = 0.3;
-
-console.log(intrestRate);
-
-let isApproved = true;
-
-// while ((isApproved = true)) {
-//     console.log(isApproved);
-//     break;
-// }
-
-let nameex = "maosh";
-let firstName = undefined;
-let selectedColor = null;
+input.addEventListener("mouseover", function () {
+    console.log("Muspekaren är över inputfältet!");
+    document.getElementById("changingText").textContent =
+        "Input field Hovered!";
+    encryptText.animate(
+        [{ color: "white" }, { color: "green" }, { color: "white" }],
+        {
+            duration: 800,
+            iterations: 4,
+        }
+    );
+});

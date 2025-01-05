@@ -9,6 +9,30 @@
     <body>
         <h1 id="topHeader"></h1>
         <p id="topPara"></p>
+        <form>
+            <input
+                class="input-box"
+                id="textInput"
+                type="text"
+                placeholder="type here" />
+            <button type="submit" id="submitBtn">ENTER</button>
+        </form>
+
+        <div id="encrypBox" class="encrypt-box decryp-box">
+            <p>This is the ENcrypted message:</p>
+            <h2 id="encryptText" class="decryp-text">Text</h2>
+        </div>
+
+        <div id="decrypBox" class="decryp-box">
+            <p>This is the decrypted message:</p>
+            <h2 id="decryptText" class="decryp-text">Text</h2>
+        </div>
+
+        <div class="decryp-box big">
+            <h2 id="changingText" class="changing-text">
+                This text will change
+            </h2>
+        </div>
         <script src="./index.js"></script>
     </body>
 </html>
