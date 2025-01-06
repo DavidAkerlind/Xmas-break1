@@ -31,7 +31,7 @@ input.addEventListener("mouseover", function () {
         [{ color: "white" }, { color: "green" }, { color: "white" }],
         {
             duration: 800,
-            iterations: 4,
+            iterations: 3,
         }
     );
 });
